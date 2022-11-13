@@ -55,4 +55,4 @@ volumes:
       device: "~/shogura/data/mariadb/"
 networks:
   wp_network:
-    driver: bridge
+    driver: bridg
