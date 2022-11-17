@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
     vim \
     sudo
 
-COPY conf/nginx.conf /etc/nginx/sites-avilable/default/
+COPY conf/nginx.conf /etc/nginx/sites-enabled/default
+COPY tools/index.nginx-debian.html /var/www/html
 
 EXPOSE 443
 
