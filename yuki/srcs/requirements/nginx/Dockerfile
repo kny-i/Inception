@@ -20,6 +20,6 @@ RUN openssl req -x509 \
 
 COPY conf/nginx.conf /etc/nginx/sites-enabled/default
 COPY tools/index.nginx-debian.html /var/www/html
+
 #
-CMD ["nginx","-g","deamon off;"]
-#
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
