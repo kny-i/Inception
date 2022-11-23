@@ -9,4 +9,4 @@ RUN apt-get update && apt-get install -y \
 
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/
 
-COPY ./tools/setting.sh /usr/local/bin
+COPY ./tools/setup.sh /usr/local/bin
