@@ -11,10 +11,10 @@ ARG MYSQL_PASSWORD=wordpress
 ARG MYSQL_DATABASE=wordpress
 
 RUN rm -rf /etc/mysql/mariadb.conf.d/50-server.cnf
-COPY ./requirements/mariadb/conf/50-server.cnf /etc/mysql/mariadb.conf.d/
+COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/
 
-COPY ./requirements/mariadb/tools/setup.sh ./
-COPY ./requirements/mariadb/tools/create_db.sql ./
+COPY ./tools/setup.sh ./
+COPY ./tools/create_db.sql ./
 RUN chmod +x setup.sh
 RUN sh setup.sh
 
