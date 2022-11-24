@@ -1,13 +1,3 @@
 #!/bin/bash
 
-mysql_install_db --user=mysql
-mysqld -u mysql --bootstrap << EOF
-	FLUSH PRIVILEGES;
-	CREATE DATABASE ${MYSQL_DATABASE};
-	CREATE USER '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
-	GRANT ALL PRIVILEGES ON ${MYSQL_DATABASE}.* TO '${MYSQL_USER}'@'%';
-	SET PASSWORD FOR root@localhost=PASSWORD('${MYSQL_ROOT_PASSWORD}');
-	FLUSH PRIVILEGES;
-EOF
-
-mysqld_safe
+sed -i 's/MYSQL_DATABASE/wordpress/g' create_db.sql &&  sed -i 's/MYSQL_USER/wordpress/g' create_db.sql &&  sed -i 's/MYSQL_PASSWORD/wordpress/g' create_db.sql &&  sed -i 's/MYSQL_ROOT_PASSWORD/root_pw/g' create_db.sql
