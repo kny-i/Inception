@@ -10,8 +10,7 @@ services:
   ports:
    - "443:443"
   volumes:
-   - ./requirements/nginx/conf/:/etc/nginx/http.d/
-   - ./requirements/nginx/tools:/etc/nginx/ssl/
+   - ./requirements/nginx/conf/nginx.conf:/etc/nginx/sites-enabled/default
    - wp-vol:/var/www/
   restart: always
   networks:

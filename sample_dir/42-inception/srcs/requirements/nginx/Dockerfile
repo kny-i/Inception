@@ -1,13 +1,23 @@
-#get base image latest alpine 
-FROM alpine:3.16
+FROM debian:buster
 
-#add nginx package
-RUN apk update && apk upgrade && apk add --no-cache nginx 
+#-y はyes/no の時のyes
+RUN            set -eux;
+RUN apt-get update && apt-get install -y \
+    nginx \
+    openssl \
+    vim \
+    sudo
 
-#set port to use this docker image
-EXPOSE 443
 
-COPY ./requirements/nginx/conf/setup.sh .
-RUN chmod +x setup.sh
+RUN openssl req -x509 \
+                -nodes \
+                -days 365 \
+                -newkey rsa:2048 \
+                -keyout /etc/ssl/private/nginx.key \
+                -out /etc/ssl/certs/nginx.crt \
+                -subj "/C=JP/ST=Tokyo/L=Ropongi/O=42Tokyo/OU=students/CN=ykondo/emailAddress=ykondo@student.42tokyo.jp"
 
-CMD ["./setup.sh"]
+
+
+#
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
