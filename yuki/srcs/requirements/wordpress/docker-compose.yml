@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mariadb:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: wordpress
+    env_file: ./tools/.env
+    restart: always
+
+

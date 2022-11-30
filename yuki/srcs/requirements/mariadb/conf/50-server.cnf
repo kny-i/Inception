@@ -16,6 +16,7 @@ pid-file = /run/mysqld/mysqld.pid
 		tmpdir = /tmp
 		lc-messages-dir = /usr/share/mysql
 		lc-messages = en_US
+		port=3306 #追加
 skip-external-locking
 
 # Broken reverse DNS slows down connections considerably and name resolve is
@@ -26,7 +27,6 @@ skip-external-locking
 # localhost which is more compatible and is not less secure.
 #bind-address = 0.0.0.
 
-		port=3306 #ここだけ追加
 
 #
 # * Fine Tuning

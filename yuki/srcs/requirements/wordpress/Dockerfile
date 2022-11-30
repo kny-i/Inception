@@ -6,6 +6,8 @@ EXPOSE 9000
 
 COPY ./conf/ .
 
-COPY ./tools/wordpress.sh /usr/local/bin/
+COPY ./tools/wordpress.sh /
 
-CMD  ["./usr/local/bin/wordpress.sh"]
+RUN chmod +x /wordpress.sh
+ENTRYPOINT  [" /wordpress.sh"]
+#ENTRYPOINT  ["tail", "-f"]
