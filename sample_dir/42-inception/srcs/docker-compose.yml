@@ -10,11 +10,10 @@ services:
   ports:
    - "443:443"
   volumes:
-   - ./requirements/nginx/conf/nginx.conf:/etc/nginx/sites-enabled/default
    - wp-vol:/var/www/
   restart: always
   networks:
-   - wp_network
+   - inception_network
  mariadb:
   build:
    context: .
@@ -25,7 +24,7 @@ services:
    - db-vol:/var/lib/mysql
   restart: always
   networks:
-   - wp_network
+   - inception_network
  wordpress:
   build:
    context: .
@@ -40,7 +39,7 @@ services:
    - wp-vol:/var/www/
   restart: always
   networks:
-   - wp_network
+   - inception_network
 volumes:
  wp-vol:
   driver: local
@@ -55,5 +54,5 @@ volumes:
    o: bind
    device: "~/shogura/data/mariadb/"
 networks:
- wp_network:
+ inception_network:
   driver: bridge

@@ -15,9 +15,9 @@ RUN openssl req -x509 \
                 -newkey rsa:2048 \
                 -keyout /etc/ssl/private/nginx.key \
                 -out /etc/ssl/certs/nginx.crt \
-                -subj "/C=JP/ST=Tokyo/L=Ropongi/O=42Tokyo/OU=students/CN=ykondo/emailAddress=ykondo@student.42tokyo.jp"
+                -subj "/C=JP/ST=Tokyo/L=Ropongi/O=42Tokyo/OU=students/CN=ykondo/emailAddress=ykondo@student.42tokyo.jp" \
 
-
+COPY  ./conf/nginx.conf /etc/nginx/sites-enabled/default
 
 #
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
