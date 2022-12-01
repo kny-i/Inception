@@ -35,6 +35,8 @@ services:
    - mariadb
   env_file: .env
   volumes:
+   - ./requirements/wordpress/conf/:.
+   - ./requirements/wordpress/tools/wordpress.sh:/usr/local/bin/
    - wp-vol:/var/www/
   restart: always
   networks:
