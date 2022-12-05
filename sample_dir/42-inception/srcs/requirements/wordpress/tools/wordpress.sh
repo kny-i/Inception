@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+
+set -eux
 #install wordpress
 if [ -d /var/www/wordpress ]; then
 	echo "wordpress dir is already exist"
