@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 #install wordpress
 if [ -d /var/www/wordpress ]; then
 	echo "wordpress dir is already exist"
@@ -37,3 +35,9 @@ wp user create --allow-root ykondo   ykondo@42tokyo.com --user_pass=ykondo  --pa
 #start php8-fpm
 mkdir -p /run/php
 /usr/sbin/php-fpm7.3 -F
+
+
+
+
+
+
