@@ -29,8 +29,8 @@ else
 fi
 
 #setup wp-cli wordpress
-wp core --allow-root install --path=/var/www/wordpress --url=https://shogura.42.fr --title=inception --admin_user=root_ad --admin_password=root --admin_email="shogura@student.42tokyo.jp"
-wp user create --allow-root shogura   shogura@42tokyo.com --user_pass=shogura  --path=/var/www/wordpress
+wp core --allow-root install --path=/var/www/wordpress --url=https://ykondo.42.fr --title=inception --admin_user=root_ad --admin_password=root --admin_email="ykondo@student.42tokyo.jp"
+wp user create --allow-root ykondo   ykondo@42tokyo.com --user_pass=ykondo  --path=/var/www/wordpress
 
 #start php8-fpm
 mkdir -p /run/php

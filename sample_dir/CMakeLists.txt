@@ -10,11 +10,11 @@ add_executable(sample_dir
         42-inception/srcs/requirements/mariadb/Dockerfile
         42-inception/srcs/requirements/nginx/conf/nginx.conf
         42-inception/srcs/requirements/nginx/conf/setup.sh
-        42-inception/srcs/requirements/nginx/tools/shogura.42.fr.crt
-        42-inception/srcs/requirements/nginx/tools/shogura.42.fr.key
+        42-inception/srcs/requirements/nginx/tools/ykondo.42.fr.crt
+        42-inception/srcs/requirements/nginx/tools/ykondo.42.fr.key
         42-inception/srcs/requirements/nginx/Dockerfile
-        42-inception/srcs/requirements/tools/shogura.42.fr.crt
-        42-inception/srcs/requirements/tools/shogura.42.fr.key
+        42-inception/srcs/requirements/tools/ykondo.42.fr.crt
+        42-inception/srcs/requirements/tools/ykondo.42.fr.key
         42-inception/srcs/requirements/wordpress/conf/wp-config.php
         42-inception/srcs/requirements/wordpress/conf/www.conf
         42-inception/srcs/requirements/wordpress/tools/wordpress.sh
