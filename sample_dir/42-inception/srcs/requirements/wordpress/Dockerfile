@@ -2,7 +2,17 @@ FROM debian:buster
 
 RUN            set -eux;
 
-RUN apt-get -y update && apt-get -y upgrade && apt-get -y install php7.3 php7.3-fpm php7.3-mysql php7.3-json php7.3-mbstring php7.3-common php7.3-curl mariadb-client wget curl
+RUN apt-get -y update && apt-get -y upgrade && apt-get -y install php7.3 \
+    php7.3-fpm \
+    php7.3-mysql \
+    php7.3-json  \
+    php7.3-mbstring \
+    php7.3-common \
+    php7.3-curl \
+    mariadb-client \
+    wget \
+    curl \
+    vim
 
 EXPOSE 9000
 
