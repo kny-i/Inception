@@ -14,7 +14,7 @@ clean:
 	@docker-compose -f srcs/docker-compose.yml down
 
 fclean:
-	@sudo rm -rf ~/ykondo/	#これは何？
+	@sudo rm -rf ~/ykondo	#これは何？
 	@docker-compose -f srcs/docker-compose.yml down --rmi all --volumes --remove-orphans
 
 .PHONY: all clean fclean
