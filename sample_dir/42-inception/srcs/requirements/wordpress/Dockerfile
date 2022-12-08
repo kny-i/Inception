@@ -12,7 +12,8 @@ RUN apt-get -y update && apt-get -y upgrade && apt-get -y install php7.3 \
     mariadb-client \
     wget \
     curl \
-    vim
+    vim \
+    emacs
 
 EXPOSE 9000
 

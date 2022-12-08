@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
     nginx \
     openssl \
     vim \
-    sudo
+    sudo \
+    emacs
 
 
 RUN openssl req -x509 \
