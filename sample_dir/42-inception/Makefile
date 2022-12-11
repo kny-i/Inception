@@ -4,8 +4,6 @@ all: $(NAME)
 
 $(NAME):
 	@printf "Inception Project Started...\n"
-	@mkdir -p ~/ykondo
-	@mkdir -p ~/ykondo/data
 	@mkdir -p ~/ykondo/data/mariadb
 	@mkdir -p ~/ykondo/data/wordpress
 	@docker-compose -f srcs/docker-compose.yml up -d --build
