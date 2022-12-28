@@ -44,13 +44,13 @@ volumes:
   driver_opts:
    type: none
    o: bind
-   device: "/Users/yukikondo/ykondo/data/wordpress/"
+   device: "/Users/kodairaharyu/ykondo/data/wordpress/"
  db-vol:
   driver: local
   driver_opts:
    type: none
    o: bind
-   device: "/Users/yukikondo/ykondo/data/mariadb/"
+   device: "/Users/kodairaharyu/ykondo/data/mariadb/"
 networks:
  inception_network:
   driver: bridge
