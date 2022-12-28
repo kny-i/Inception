@@ -1,0 +1,13 @@
+①mariadbのコンテナの中に入って、
+mariadb -u root -p
+[password] root_pw
+と打つと、mariadbに入れる。
+
+②use wordpress;
+を打って、データベースを選択する。
+
+③show full tables;
+を打って、データベースのテーブルを確認する。
+
+④SELECT * FROM [TABLE名]
+を使って、tableの中身を確認できるようにする。
