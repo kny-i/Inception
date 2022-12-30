@@ -33,7 +33,7 @@ wp core --allow-root install --path=/var/www/wordpress --url=https://ykondo.42.f
 wp user create --allow-root ykondo   ykondo@42tokyo.com --user_pass=ykondo  --path=/var/www/wordpress
 
 #start php8-fpm
-mkdir -p /run/php
+mkdir -p /run/php;
 /usr/sbin/php-fpm7.3 -F
 
 
