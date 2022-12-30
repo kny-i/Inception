@@ -18,7 +18,7 @@ mv www.conf /etc/php/7.3/fpm/pool.d/www.conf
 rm -rf /var/www/wordpress/wp-config-sample.php
 mv  ./wp-config.php /var/www/wordpress/wp-config.php
 
-#input password and
+#input password and name of db
 export MYSQL_ROOT_PASSWORD=root_pw
 export MYSQL_USER=wordpress
 export MYSQL_PASSWORD=wordpress
