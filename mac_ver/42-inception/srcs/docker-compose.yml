@@ -19,7 +19,6 @@ services:
    context: .
    dockerfile: requirements/mariadb/Dockerfile
   container_name: mariadb
-  env_file: .env
   volumes:
    - db-vol:/var/lib/mysql
   restart: always
@@ -32,7 +31,6 @@ services:
   container_name: wordpress
   depends_on:
    - mariadb
-  env_file: .env
   volumes:
    - wp-vol:/var/www/
   restart: always

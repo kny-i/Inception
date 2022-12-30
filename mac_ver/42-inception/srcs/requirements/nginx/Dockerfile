@@ -18,10 +18,7 @@ RUN openssl req -x509 \
                 -out /etc/ssl/certs/nginx.crt \
                 -subj "/C=JP/ST=Tokyo/L=Ropongi/O=42Tokyo/OU=students/CN=ykondo/emailAddress=ykondo@student.42tokyo.jp"
 
-RUN mkdir -p /run/nginx
 COPY ./requirements/nginx/conf/nginx.conf /etc/nginx/conf.d/default.conf
 
-
-COPY ./requirements/nginx/tools/index.html /var/www/html
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
