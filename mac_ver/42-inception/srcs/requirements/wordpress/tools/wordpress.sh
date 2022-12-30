@@ -18,6 +18,16 @@ mv www.conf /etc/php/7.3/fpm/pool.d/www.conf
 rm -rf /var/www/wordpress/wp-config-sample.php
 mv  ./wp-config.php /var/www/wordpress/wp-config.php
 
+#input password and
+export MYSQL_ROOT_PASSWORD=root_pw
+export MYSQL_USER=wordpress
+export MYSQL_PASSWORD=wordpress
+export MYSQL_DATABASE=wordpress
+
+sed -i "s/MYSQL_DATABASE/$MYSQL_DATABASE/g" /var/www/wordpress/wp-config.php &&  sed -i "s/MYSQL_USER/$MYSQL_USER/g" /var/www/wordpress/wp-config.php &&  sed -i "s/MYSQL_PASSWORD/$MYSQL_PASSWORD/g" /var/www/wordpress/wp-config.php &&  sed -i "s/MYSQL_ROOT_PASSWORD/$MYSQL_ROOT_PASSWORD/g" /var/www/wordpress/wp-config.php
+
+
+
 #install wp-cli
 if [ -f /usr/local/bin/wp ]; then
 	echo "wp-cli is already exist"
